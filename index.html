@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luxury Digital Business Card</title>
 
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -17,14 +17,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Floating particles */
 .particle {
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   background: gold;
   border-radius: 50%;
   animation: float 12s infinite linear;
@@ -37,7 +37,9 @@ body {
 
 /* Main container */
 .container {
-  width: 390px;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -45,20 +47,19 @@ body {
 
 /* Profile */
 .profile {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 20px;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 16px;
   border-radius: 50%;
   background: linear-gradient(145deg, #d4af37, #8a6b2d);
-  padding: 6px;
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+  padding: 5px;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
   animation: glow 3s infinite alternate;
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 30px rgba(212,175,55,0.4); }
-  to { box-shadow: 0 0 60px rgba(212,175,55,0.9); }
+  from { box-shadow: 0 0 20px rgba(212,175,55,0.4); }
+  to { box-shadow: 0 0 45px rgba(212,175,55,0.9); }
 }
 
 .profile img {
@@ -70,55 +71,55 @@ body {
 }
 
 .name {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
 .title {
-  font-size: 14px;
+  font-size: 13px;
   color: #d4af37;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* Glass Card */
 .card {
   background: rgba(20, 20, 20, 0.7);
   backdrop-filter: blur(12px);
-  border-radius: 30px;
-  padding: 25px 20px;
+  border-radius: 24px;
+  padding: 20px 16px;
   border: 1px solid rgba(212, 175, 55, 0.3);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
 }
 
 /* Info rows */
 .row {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .icon {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: linear-gradient(145deg, #d4af37, #8a6b2d);
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000;
-  font-size: 20px;
-  margin-right: 12px;
-  box-shadow: 0 0 15px rgba(212,175,55,0.5);
+  font-size: 18px;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .text {
   flex: 1;
   background: rgba(0,0,0,0.6);
-  border-radius: 30px;
-  padding: 14px 18px;
+  border-radius: 20px;
+  padding: 12px 14px;
   border: 1px solid rgba(212,175,55,0.3);
-  font-size: 14px;
+  font-size: 13px;
+  word-break: break-word;
 }
 
 .text a {
@@ -127,43 +128,28 @@ body {
   font-weight: 500;
 }
 
-/* Action buttons */
-.actions {
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.actions a {
-  flex: 1;
-  margin: 5px;
-  padding: 12px;
-  background: linear-gradient(145deg, #d4af37, #8a6b2d);
-  color: #000;
-  border-radius: 30px;
-  font-size: 13px;
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
-}
-
 /* QR */
 .qr {
-  margin-top: 20px;
+  margin-top: 18px;
 }
 .qr img {
-  width: 130px;
+  width: 120px;
   border-radius: 12px;
   border: 2px solid gold;
+}
+
+/* Mobile tweaks */
+@media (max-width: 360px) {
+  .name { font-size: 20px; }
+  .profile { width: 130px; height: 130px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Particles -->
 <script>
-for (let i = 0; i < 30; i++) {
+for (let i = 0; i < 25; i++) {
   let p = document.createElement("div");
   p.className = "particle";
   p.style.left = Math.random() * 100 + "vw";
@@ -175,57 +161,43 @@ for (let i = 0; i < 30; i++) {
 
 <div class="container">
 
-  <!-- Profile -->
   <div class="profile">
-  <img src="53217684-0f65-483a-80ae-48f709e88508.png" alt="RSP Logo">
-</div>
+    <img src="53217684-0f65-483a-80ae-48f709e88508.png" alt="RSP Logo">
+  </div>
 
   <div class="name">RSP Events and Concepts Inc.</div>
   <div class="title">Organized | Seamless | Personalized</div>
 
-  <!-- Glass Card -->
   <div class="card">
 
     <div class="row">
       <div class="icon"><i class="fa-solid fa-phone"></i></div>
-      <div class="text">
-        <a href="tel:+639282256862">+63 928 225 6862</a>
-      </div>
+      <div class="text"><a href="tel:+639282256862">+63 928 225 6862</a></div>
     </div>
 
     <div class="row">
       <div class="icon"><i class="fa-solid fa-envelope"></i></div>
-      <div class="text">
-      <a href="https://gmail.com" target="_blank">rspevents@gmail.com</a>
-      </div>
+      <div class="text"><a href="mailto:rspevents@gmail.com">rspevents@gmail.com</a></div>
     </div>
 
     <div class="row">
       <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
-      <div class="text">
-        <a href="https://facebook.com" target="_blank">facebook.com/payawalrjay</a>
-      </div>
+      <div class="text"><a href="https://facebook.com/payawalrjay" target="_blank">facebook.com/payawalrjay</a></div>
     </div>
 
     <div class="row">
       <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-      <div class="text">
-        <a href="https://instagram.com" target="_blank">@rsp</a>
-      </div>
+      <div class="text"><a href="https://instagram.com" target="_blank">@rsp</a></div>
     </div>
 
     <div class="row">
       <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
-      <div class="text">
-        <a href="https://wa.me/639282256862" target="_blank">WhatsApp Chat</a>
-      </div>
+      <div class="text"><a href="https://wa.me/639282256862" target="_blank">WhatsApp Chat</a></div>
     </div>
 
     <div class="row">
       <div class="icon"><i class="fa-solid fa-globe"></i></div>
-      <div class="text">
-        <a href="https://rspeventandconceptsinc.com" target="_blank">rspeventandconceptsinc.com</a>
-      </div>
+      <div class="text"><a href="https://rspeventandconceptsinc.com" target="_blank">rspeventandconceptsinc.com</a></div>
     </div>
 
   </div>
